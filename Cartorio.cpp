@@ -1,20 +1,20 @@
-#include <stdio.h> //biblioteca de comunicaÁ„o com o usu·rio
-#include <stdlib.h> //biblioteca de alocaÁ„o de espaÁo em memoria
-#include <locale.h> //biblioteca de alocaÁıes de texto por regi„o
+#include <stdio.h> //biblioteca de comunica√ß√£o com o usu√°rio
+#include <stdlib.h> //biblioteca de aloca√ß√£o de espa√ßo em memoria
+#include <locale.h> //biblioteca de aloca√ß√µes de texto por regi√£o
 #include <string.h> //biblioteca responsavel por cuidar dos string
 
 int registro()
 {
 	setlocale(LC_ALL, "Portuguese"); //Definindo a linguagem
 	
-	//criaÁ„o das variaveis
+	//cria√ß√£o das variaveis
 	char arquivo[40];
 	char cpf[40];
 	char nome[40];
 	char sobrenome[40];
 	char cargo[40];
 	
-	printf("Digite o CPG a ser cadastrado (apenas n˙meros): "); 
+	printf("Digite o CPG a ser cadastrado (apenas n√∫meros): "); 
 	scanf("%s", cpf); //%s para salvar strings
 	
 	strcpy(arquivo, cpf); //copia os valores do cpf para o arquivo
@@ -70,7 +70,7 @@ int consulta()
 	char cpf[40];
 	char conteudo[200];
 	
-	printf("Digite o CPF a ser consultado, apenas n˙meros: ");
+	printf("Digite o CPF a ser consultado, apenas n√∫meros: ");
 	scanf("%s",cpf);
 	
 	FILE *file;
@@ -78,12 +78,12 @@ int consulta()
 		
 	if(file == NULL)
 	{
-		printf("Arquivo n„o localizado \n");
+		printf("Arquivo n√£o localizado \n");
 			system("pause");
 	}
 	while(fgets(conteudo, 200, file) !=NULL)
 	{
-		printf("\nEssas s„o as informaÁıes do usu·rio: ");
+		printf("\nEssas s√£o as informa√ß√µes do usu√°rio: ");
 		printf("%s", conteudo);
 		printf("\n\n");
 	}
@@ -105,14 +105,14 @@ int deletar()
 	
 	if (file == NULL)
 	{
-		printf("O us˙ario n„o se encontra no sistema! \n");
+		printf("O us√∫ario n√£o se encontra no sistema! \n");
 		system("pause");
 	}
 }
 
 int main()
 {
-	int opcao=0; //Definindo vari·veis
+	int opcao=0; //Definindo vari√°veis
 	int laco=1;
 	
 	for(laco=1;laco=1;)
@@ -122,19 +122,19 @@ int main()
 	
 		setlocale(LC_ALL, "Portuguese"); //Definindo a linguagem
 	
-		printf("### CartÛrio da EBAC ###\n\n"); //Inicio do menu
-		printf("Escolha a opÁ„o desejada no menu:\n\n");
+		printf("### Cart√≥rio da EBAC ###\n\n"); //Inicio do menu
+		printf("Escolha a op√ß√£o desejada no menu:\n\n");
 		printf("\t1 - Registrar nomes\n");
 		printf("\t2 - Consultar nomes\n");
 		printf("\t3 - Deletar nomes\n");
-		printf("OpÁ„o: "); //Fim do menu
+		printf("Op√ß√£o: "); //Fim do menu
 
 		scanf("%d", &opcao); //Armazenamento e escolha do usuario
 		
 		system("cls");
 		
 		
-		switch(opcao) //chamada de funÁıes
+		switch(opcao) //chamada de fun√ß√µes
 		{
 			case 1:
 			registro();
@@ -149,7 +149,7 @@ int main()
 			break;
 			
 			default:
-			printf("OpÁ„o IndisponÌvel\n"); 
+			printf("Op√ß√£o Indispon√≠vel\n"); 
 			system ("pause");
 			break;
 			
